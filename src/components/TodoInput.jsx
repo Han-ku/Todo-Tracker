@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useState, useRef} from 'react';
 
 export default function TodoInput(props) {
     const { handleAddTodos, todoValue, setTodoValue, handleEditTodoSave, editIndex, setShowDatePicker, selectedDate } = props
+
+    const inputRef = useRef(null)
+    const [placeholder, setPlaceholder] = useState("Enter todo..")
 
     const handleSubmit = () => {
       if (editIndex !== null) {
@@ -10,6 +13,10 @@ export default function TodoInput(props) {
         handleAddTodos(todoValue)
       }
       setTodoValue('')
+      if(inputRef.current) {
+        inputRef.current.blur()
+      }
+      
     }
 
     const handleKeyDown = (event) => {
@@ -18,13 +25,23 @@ export default function TodoInput(props) {
       }
     }
 
+    const handleFocus = () => {
+      setPlaceholder("")
+    }
+
+    const handleBlur = () => {
+      setPlaceholder("Enter todo..")
+    }
+
     return (
         <header>
           <input 
             value={todoValue} 
             onChange={(e) => setTodoValue(e.target.value)} 
-            placeholder="Enter todo..." 
+            placeholder={placeholder} 
             onKeyDown={handleKeyDown}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
           />
 
           <button 
