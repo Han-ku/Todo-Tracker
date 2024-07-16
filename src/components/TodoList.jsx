@@ -44,7 +44,7 @@ export default function TodoList(props) {
               )
             ))
           ) : (
-            <li>No tasks for today</li>
+            <li id='no-task'>No tasks for today</li>
           )}
         </ul>
       </div>
