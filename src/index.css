@@ -312,6 +312,76 @@ p {
 }
 /* END Date history modal */
 
+.auth_container {
+  margin-top: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-form-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 5vh 5vw ;
+  background: #21b1be7c;
+}
+
+.auth-form-container p {
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 5vh;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.auth-form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+}
+
+.auth-form-container form input{
+  height: 8vh;
+  padding-left: 1vw;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.auth-form-container form button {
+  cursor: pointer;
+  padding: 1vh 1vw;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  transition: all .3s easy;
+}
+
+.auth-form-container form button:hover,
+.auth-form-container form button:active {
+  background-color: lightgreen;
+  border-color: white;
+}
+
+.auth-form-container form button:active {
+  scale: .9;
+}
+
+.changePageBtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  opacity: .6;
+  font-size:x-small;
+  transition: all .3s easy;
+}
+
+.changePageBtn:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
 
 @media (min-width: 640px) {
 
