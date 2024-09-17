@@ -12,7 +12,7 @@ const Register = (props) => {
 
     return (
         <div className='auth-form-container'>
-            <p>Register</p>
+            <p className='auth-form-title'>Register</p>
             <form onSubmit={handleSubmit}>
                 <input value={fullName} onChange={(e) => setFullName(e.target.value)} type="text" placeholder='Full Name' id='fullName' name='fullName'/>
 
@@ -20,7 +20,7 @@ const Register = (props) => {
 
                 <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder='Password' id='password' name='password'/>
 
-                <button>Register</button>
+                <button id='register-btn'>Register</button>
             </form>
 
             <button className='changePageBtn' onClick={() => props.onFormSwitch('login')}>Already have an account? Login here</button>

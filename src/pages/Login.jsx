@@ -10,7 +10,7 @@ const Login = (props) => {
 
     return (
         <div className='auth-form-container'>
-            <p>Log In</p>
+            <p className='auth-form-title'>Login</p>
             <form onSubmit={handleSubmit}>
                 <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder='Email' id='email' name='email'/>
 
@@ -18,6 +18,10 @@ const Login = (props) => {
 
                 <button>Log In</button>
             </form>
+
+            <div className='auth-error-container hidden'>
+                <p>ERROR</p>
+            </div>
 
             <button className='changePageBtn' onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here</button>
         </div>

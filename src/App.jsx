@@ -1,23 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import Todo from './pages/Todo';
-import Register from './pages/Register';
-import Login from './pages/Login';
+import Welcome from './pages/Welcome';
+
 
 function App() {
-  const [currentForm, setCurrentForm] = useState('login')
 
-  const toggleForm = (formName) => {
-    setCurrentForm(formName)
-  }
 
   return (
     <>
-    <div className="auth_container">
-      {
-        currentForm === 'login' ? <Login onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm}/>
-      }
-    </div>
+      <Welcome/>
     </>
   )
 }
