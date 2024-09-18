@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Welcome from './pages/Welcome';
+import Todo from './pages/Todo';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <Welcome/>
+      <Todo/>
     </>
   )
 }
